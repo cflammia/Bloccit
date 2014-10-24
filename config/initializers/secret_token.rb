@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Bloccit::Application.config.secret_key_base = 'd0a5eb3376f6e5f7e4650e63994bfeb593e877dc91f920615b59518e6248be2fd68185f4e133db9fbbb40c001d9af5afd90e5de0fe444711386fd13073f28e63'
+Bloccit::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
