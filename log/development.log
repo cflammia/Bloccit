@@ -5610,3 +5610,1127 @@ Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-10-27 19:47:46 +000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-27 19:47:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRoleToUsers (20141028025707)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (3.2ms)[0m  [1mALTER TABLE "users" ADD "role" varchar(255)[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141028025707"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2014-10-28 04:10:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 126ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2014-10-28 04:10:13 +0000
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-10-28 04:10:13 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 1183ms (Views: 1182.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:14 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:15 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:16 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:16 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:16 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:16 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:16 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2014-10-28 04:10:16 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2014-10-28 04:16:06 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (260.9ms)[0m  SELECT "posts".* FROM "posts" ORDER BY created_at DESC
+  [1m[36mUser Load (7.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 50]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 49]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.7ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 48]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 47]]
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 46]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 45]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.7ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 42]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 41]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 40]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 39]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (2.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 37]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.7ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (2.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 35]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 33]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 31]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 30]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 29]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 24]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 22]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 19]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (1313.5ms)
+Completed 200 OK in 2762ms (Views: 1686.6ms | ActiveRecord: 397.0ms)
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:10 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:10 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:10 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:10 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-28 04:16:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:10 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2014-10-28 04:16:11 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2014-10-28 04:18:19 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 50]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (2.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 49]]
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 48]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 47]]
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 46]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 45]]
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 42]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 40]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 39]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 37]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 36]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 34]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 31]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 30]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 29]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 28]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (2.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 27]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 26]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 25]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 24]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 21]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 19]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (282.5ms)
+Completed 200 OK in 428ms (Views: 347.6ms | ActiveRecord: 79.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:19 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:19 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-28 04:18:19 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:19 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:19 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:19 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:19 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:19 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:20 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:20 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:20 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:20 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:20 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:20 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:20 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:20 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:20 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:20 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:20 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:20 +0000
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2014-10-28 04:18:35 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (112.0ms)
+Completed 200 OK in 273ms (Views: 266.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2014-10-28 04:18:42 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wIkx7/cUcoPlxZ9GpnM3RqVGx61vyIQSBjwJpEr5Zc8=", "user"=>{"email"=>"flammia.carrie@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (26.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'flammia.carrie@gmail.com' ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 39ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wIkx7/cUcoPlxZ9GpnM3RqVGx61vyIQSBjwJpEr5Zc8=", "user"=>{"email"=>"flammia.carrie@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 229ms (Views: 151.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-28 04:18:42 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:42 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:42 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:43 +0000
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2014-10-28 04:18:48 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wIkx7/cUcoPlxZ9GpnM3RqVGx61vyIQSBjwJpEr5Zc8=", "user"=>{"email"=>"flammia.carrie@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'flammia.carrie@gmail.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 5ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wIkx7/cUcoPlxZ9GpnM3RqVGx61vyIQSBjwJpEr5Zc8=", "user"=>{"email"=>"flammia.carrie@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 232ms (Views: 154.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:48 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:48 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:48 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:48 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:48 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-28 04:18:48 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:48 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:48 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:48 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:49 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:49 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:49 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:49 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:49 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:49 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:49 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:49 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:49 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:49 +0000
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2014-10-28 04:18:55 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wIkx7/cUcoPlxZ9GpnM3RqVGx61vyIQSBjwJpEr5Zc8=", "user"=>{"email"=>"flammia.carrie@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'flammia.carrie@gmail.com' ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 4ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wIkx7/cUcoPlxZ9GpnM3RqVGx61vyIQSBjwJpEr5Zc8=", "user"=>{"email"=>"flammia.carrie@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 245ms (Views: 161.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:55 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:55 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:55 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:55 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:55 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-28 04:18:55 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:55 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:55 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:56 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:56 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:56 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:56 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:56 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:56 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:56 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:56 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:56 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:56 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:56 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-28 04:18:56 +0000
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2014-10-28 04:19:01 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wIkx7/cUcoPlxZ9GpnM3RqVGx61vyIQSBjwJpEr5Zc8=", "user"=>{"email"=>"flammia.carrie@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'flammia.carrie@gmail.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 4ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wIkx7/cUcoPlxZ9GpnM3RqVGx61vyIQSBjwJpEr5Zc8=", "user"=>{"email"=>"flammia.carrie@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 238ms (Views: 161.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:01 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:01 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:01 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:01 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:01 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-28 04:19:01 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:02 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2014-10-28 04:19:06 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 122ms (Views: 121.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:06 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:06 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:06 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-28 04:19:06 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:06 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:06 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:07 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:07 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:07 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:07 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:07 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:07 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:07 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:07 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:07 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:07 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:07 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-28 04:19:07 +0000
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (2.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (17.6ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", Tue, 28 Oct 2014 04:24:28 UTC +00:00], ["created_at", Tue, 28 Oct 2014 04:24:32 UTC +00:00], ["email", "admin@example.com"], ["encrypted_password", "$2a$10$wQr2hXW5wTcOPlfRa9KsoeobkiS/IMwbIMQtcMZBK61YSpBpW3OoG"], ["name", "Admin User"], ["updated_at", Tue, 28 Oct 2014 04:24:32 UTC +00:00]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.4ms)[0m  UPDATE "users" SET "role" = ?, "updated_at" = ? WHERE "users"."id" = 6  [["role", "admin"], ["updated_at", Tue, 28 Oct 2014 04:24:46 UTC +00:00]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 10.0.2.2 at 2014-10-28 04:25:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 891ms (Views: 845.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:10 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:10 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:10 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-28 04:25:10 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:11 +0000
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2014-10-28 04:25:13 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (534.9ms)
+Completed 200 OK in 713ms (Views: 683.2ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2014-10-28 04:25:43 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wIkx7/cUcoPlxZ9GpnM3RqVGx61vyIQSBjwJpEr5Zc8=", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'admin@example.com' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (18.7ms)[0m  UPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = 6  [["remember_created_at", Tue, 28 Oct 2014 04:25:43 UTC +00:00], ["updated_at", Tue, 28 Oct 2014 04:25:43 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[36mSQL (7.8ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 6[0m  [["last_sign_in_at", Tue, 28 Oct 2014 04:25:43 UTC +00:00], ["current_sign_in_at", Tue, 28 Oct 2014 04:25:43 UTC +00:00], ["last_sign_in_ip", "10.0.2.2"], ["current_sign_in_ip", "10.0.2.2"], ["sign_in_count", 1], ["updated_at", Tue, 28 Oct 2014 04:25:43 UTC +00:00]]
+  [1m[35m (2.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 240ms (ActiveRecord: 34.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-10-28 04:25:43 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 132ms (Views: 129.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-28 04:25:43 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:43 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:43 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:44 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2014-10-28 04:25:50 +0000
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPost Load (3.3ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 50]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 49]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 48]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 47]]
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 46]]
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 45]]
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 44]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 43]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 42]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 40]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (2.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 39]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 37]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 36]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 35]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 34]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 31]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 30]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 29]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 28]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 27]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 26]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 25]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 24]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 21]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 20]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 19]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.9ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (375.8ms)
+Completed 200 OK in 529ms (Views: 388.1ms | ActiveRecord: 87.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:51 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:52 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:52 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:52 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:52 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:52 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-28 04:25:52 +0000
+
+
+Started GET "/posts/50" for 10.0.2.2 at 2014-10-28 04:25:54 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY created_at DESC LIMIT 1  [["id", "50"]]
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 173ms (Views: 166.2ms | ActiveRecord: 4.8ms)
