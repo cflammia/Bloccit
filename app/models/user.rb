@@ -3,13 +3,12 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
-   has_many :posts
+  has_many :posts
 
-   def admin?
+  def admin?
    	role == 'admin'
-   end
-
-   def moderator?
+  end
+  def moderator?
    	role == 'moderator'
-   end
+  end
 end
