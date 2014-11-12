@@ -9215,3 +9215,77 @@ Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-11-11 16:43:21 +000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-11-11 16:43:21 +0000
+
+
+Started POST "/topics/1/posts" for 10.0.2.2 at 2014-11-11 16:56:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JGvvHzJZvX6FuesAWgxa479CYJKLPcpf1czhR/09mrc=", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Save", "topic_id"=>"1"}
+  [1m[35mTopic Load (1.9ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Load (7.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered posts/_form.html.erb (25.9ms)
+  Rendered posts/new.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 1212ms (Views: 631.6ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-11-11 16:56:40 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:40 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:40 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:40 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:40 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:40 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:40 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:40 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:40 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:41 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:41 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:41 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:41 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:41 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:41 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:41 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:41 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:41 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:41 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-11-11 16:56:41 +0000
