@@ -10,4 +10,9 @@
     %p= markdown @post.body
   .col-md-4
     - if policy(@post).edit?
-      = link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn btn-success'
+      = link_to "Edit", edit_topic_post_path(@topic,@post), class: 'btn btn-success'
+.row
+  %h2 Comments
+  .col-md-12
+    = render @comments
+    = render 'comments/form', topic: @topic, comment: @comment, post: @post

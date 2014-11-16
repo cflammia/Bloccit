@@ -1,5 +1,5 @@
 require 'faker'
- 
+
  # Create Users
 5.times do
   user = User.new(
@@ -38,6 +38,7 @@ posts = Post.all
   Comment.create!(
     # user: users.sample,   # we have not yet associated Users with Comments
     post: posts.sample,
+    user: users.sample,
     body: Faker::Lorem.paragraph
   )
 end
@@ -52,17 +53,17 @@ end
  )
  admin.skip_confirmation!
  admin.save!
- 
+
  # Create a moderator
  moderator = User.new(
    name:     'Moderator User',
-   email:    'moderator@example.com', 
+   email:    'moderator@example.com',
    password: 'helloworld',
    role:     'moderator'
  )
  moderator.skip_confirmation!
  moderator.save!
- 
+
  # Create a member
  member = User.new(
    name:     'Member User',
