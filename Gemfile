@@ -35,6 +35,9 @@ gem 'figaro', '1.0'
 gem 'pundit'
 gem 'redcarpet'
 gem 'haml'
+gem 'carrierwave'
+gem 'mini_magick', '~> 4.0.0'
+gem 'fog'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
