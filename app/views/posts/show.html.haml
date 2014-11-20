@@ -1,8 +1,9 @@
-%h1
-  = image_tag(@post.image.thumb.url) if @post.image?
-  = markdown @post.title
 .row
   .col-md-8
+    = render partial: 'votes/voter', locals: { post: @post }
+    %h1
+      = image_tag(@post.image.thumb.url) if @post.image?
+      = markdown @post.title
     %small
       = image_tag(@post.user.avatar.tiny.url) if @post.user.avatar?
       submitted #{time_ago_in_words(@post.created_at)} ago by
@@ -11,10 +12,16 @@
   .col-md-4
     - if policy(@post).edit?
       = link_to "Edit", edit_topic_post_path(@topic,@post), class: 'btn btn-success'
-    - if policy(@post).destroy?
-      = link_to "Delete Post", [@topic, @post], method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this post?' }
+  - if policy(@post).destroy?
+    = link_to "Delete Post", [@topic, @post], method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this post?' }
+  %div
+    %h3= pluralize(@post.points, 'point')
+    %small
+      = pluralize(@post.up_votes, 'up vote')
+      ,
+      \#{pluralize(@post.down_votes, 'down vote')}
 .row
   %h2 Comments
   .col-md-12
     = render @comments
-    = render 'comments/form', topic: @topic, comment: @comment, post: @post
+    = render 'comments/form'
