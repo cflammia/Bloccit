@@ -12,6 +12,14 @@ group :development do
 	gem 'sqlite3'
 end
 
+group :test do
+  gem 'rspec-rails', '~> 3.1.0'
+end
+
+group :development, :test do
+	gem 'byebug'
+end
+
 gem 'bootstrap-sass', '~>3.1.1'
 
 # Use SCSS for stylesheets
