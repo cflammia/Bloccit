@@ -11,6 +11,7 @@ require 'rails_helper'
 
      describe '#up_votes' do
        it "counts the number of votes with value = 1" do
+
          expect( @post.up_votes ).to eq(3)
        end
      end
