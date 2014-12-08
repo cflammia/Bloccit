@@ -14,7 +14,12 @@ class User < ActiveRecord::Base
   def admin?
    	role == 'admin'
   end
+
   def moderator?
    	role == 'moderator'
+  end
+
+  def favorited(post)
+    favorites.where(post_id: post.id).first
   end
 end
