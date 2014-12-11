@@ -9,7 +9,7 @@ class TopicPolicy < ApplicationPolicy
 
 	def create?
 		user.present? && user.admin?
-  end
+	end
 
 	def update?
 		create?
