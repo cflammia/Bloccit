@@ -13,7 +13,11 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails', '~> 3.1.0'
+	gem 'rspec-rails', '~> 3.1.0'
+	gem 'capybara'
+	gem 'database_cleaner'
+	gem 'factory_girl_rails', '~> 4.0'
+	gem 'pry-rails'
 end
 
 group :development, :test do
@@ -47,6 +51,7 @@ gem 'carrierwave'
 gem 'mini_magick', '~> 4.0.0'
 gem 'fog'
 gem 'will_paginate', '~>3.0.5'
+gem 'newrelic_rpm'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
